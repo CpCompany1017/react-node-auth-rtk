@@ -1,0 +1,32 @@
+{
+  "name": "react-node-auth-rtk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CpCompany1017/react-node-auth-rtk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CpCompany1017/react-node-auth-rtk/issues"
+  },
+  "homepage": "https://github.com/CpCompany1017/react-node-auth-rtk#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "concurrently": "^7.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2",
+    "morgan": "^1.10.0"
+  }
+}
