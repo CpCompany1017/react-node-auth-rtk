@@ -4,6 +4,7 @@ require("dotenv").config();
 const morgan = require("morgan");
 const cors = require("cors");
 const dbConnect = require("./config/dbConnect");
+const userRoutes = require("./routes/userRoutes");
 
 const PORT = process.env.PORT || 8484;
 
@@ -24,6 +25,8 @@ app.use(
 );
 app.use(express.json());
 
+
+app.use("/api/auth", userRoutes);
 
 app.listen(PORT, () => {
   console.log(`~~~ Server is running on port ${PORT} ~~~`.white.bold);

@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../models/userModel");
 const registerSchema = require("../validations/registerSchema");
 const loginSchema = require("../validations/loginSchema");
 const { generatePassword, comparePassword } = require("../config/bcrypt");

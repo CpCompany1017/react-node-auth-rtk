@@ -1,5 +1,5 @@
 const { verifyToken } = require("../config/token");
-const User = require("../models/User");
+const User = require("../models/userModel");
 
 const authMiddleware = async (req, res, next) => {
   let token;
