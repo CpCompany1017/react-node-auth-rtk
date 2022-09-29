@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html, body {
      --moz-osx-font-smoothing: grayscale;
-        background-color: ${(props) => props.theme.bodyBg};
+        background-color: ${(props) => props.theme.backgroundColor};
         font-family: 'Oswald', sans-serif;
         color: ${(props) => props.theme.textColor};
         scroll-behavior: smooth;

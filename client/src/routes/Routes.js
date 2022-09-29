@@ -8,12 +8,12 @@ import Welcome from "../pages/Welcome";
 const Routes = () => {
   return (
     <Routing>
-      <Route path="/welcome" element={<Welcome />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/auth" element={<PrivateRoute />}>
-        <Route path="/auth" element={<Navigate to="home" />} />
-        <Route path="home" element={<Home />} />
+      <Route path="/" element={<Navigate to="welcome" />} />
+      <Route path="welcome" element={<Welcome />} />
+      <Route path="login" element={<Login />} />
+      <Route path="register" element={<Register />} />
+      <Route path="auth" element={<PrivateRoute />}>
+        <Route path="auth" element={<Navigate to="home" />} />
       </Route>
     </Routing>
   );
