@@ -1,20 +1,6 @@
-import styled from "styled-components";
+import Container from "../components/Container";
 import Button from "../components/Button";
 import { GoHome } from "react-icons/go";
-
-const Container = styled.div.attrs({
-  className: "container text-center d-flex",
-})`
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  > h1 {
-    margin-bottom: 20px;
-  }
-  > div {
-    padding: 20px;
-  }
-`;
 
 const Welcome = () => {
   return (
