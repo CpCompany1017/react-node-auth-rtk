@@ -5,7 +5,7 @@ import { GoHome } from "react-icons/go";
 const Welcome = () => {
   return (
     <Container>
-      <h1>Welcome to simple auth mern app</h1>
+      <h1>Welcome to simple auth app</h1>
       <Button icon="true" text={<GoHome />} link="/welcome" />
       <h4>
         This is a simple example app that allows you to register and login
