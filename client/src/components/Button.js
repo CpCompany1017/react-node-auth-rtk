@@ -20,10 +20,19 @@ const BTN = styled.button.attrs((props) => ({
   }
 `;
 
-const Button = ({ text, link, icon }) => {
+const Button = ({ text, link, icon, type }) => {
   const navigate = useNavigate();
   return (
-    <BTN onClick={() => navigate(link)} icon={icon}>
+    <BTN
+      onClick={
+        link &&
+        (() => {
+          navigate(link);
+        })
+      }
+      icon={icon}
+      type={type}
+    >
       {text}
     </BTN>
   );

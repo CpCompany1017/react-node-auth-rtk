@@ -8,7 +8,7 @@ import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-axios.defaults.baseURL = "/api/";
+axios.defaults.baseURL = "http://localhost:8484/api/auth/";
 axios.interceptors.request.use((config) => {
   const user = JSON.parse(localStorage.getItem("user"));
   if (user?.token) {

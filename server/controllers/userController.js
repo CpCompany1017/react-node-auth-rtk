@@ -10,17 +10,12 @@ const register = async (req, res) => {
     const { error } = registerSchema(req.body);
     if (error) return res.status(400).json({ error: error.details[0].message });
 
-    const { name, email, password } = req.body;
+    const { username, email, password } = req.body;
 
-    const emailExist = await User.findOne({ email });
-    if (emailExist)
-      return res.status(400).json({ error: "Email already exists" });
-
-    const usernameExist = await User.findOne({
-      username,
-    });
-    if (usernameExist)
-      return res.status(400).json({ error: "Username already exists" });
+    const emailExists = await User.findOne({ email });
+    const usernameExists = await User.findOne({ username });
+    if (emailExists) return res.status(400).send("Email already exists");
+    if (usernameExists) return res.status(400).send("Username already exists");
 
     const hashedPassword = await generatePassword(password);
 
