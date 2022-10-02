@@ -2,7 +2,7 @@ import { useToggle } from "../../../hooks/useToggle";
 import Strength from "./Strength";
 import Copy from "./Copy";
 import Generate from "./Generate";
-import Eyes from "./Show";
+import Show from "./Show";
 
 import { MdOutlinePassword } from "react-icons/md";
 
@@ -29,9 +29,9 @@ const Password = ({ password, onChange, type }) => {
             <>
               <Strength password={password} />
 
-              <div className="d-flex ">
+              <div className="d-flex">
                 <Copy password={password} />
-                <Eyes show={showPassword} setShow={setShowPassword} />
+                <Show show={showPassword} setShow={setShowPassword} />
                 <Generate password={password} onChange={onChange} />
               </div>
             </>
