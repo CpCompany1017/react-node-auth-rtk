@@ -28,7 +28,7 @@ export const usePasswordStrength = (password) => {
       setStrengthText("Weak");
     } else {
       setStrength(0);
-      setStrengthColor("black");
+      setStrengthColor("transparent");
       setStrengthText("");
     }
   }, [password]);

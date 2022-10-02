@@ -12,9 +12,14 @@ const Routes = () => {
       <Route path="welcome" element={<Welcome />} />
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
-      <Route path="auth" element={<PrivateRoute />}>
-        <Route path="auth" element={<Navigate to="home" />} />
-      </Route>
+      <Route
+        path="auth"
+        element={
+          <PrivateRoute>
+            <Home />
+          </PrivateRoute>
+        }
+      />
     </Routing>
   );
 };

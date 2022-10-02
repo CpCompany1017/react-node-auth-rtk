@@ -39,7 +39,6 @@ const Register = () => {
         navigate("/auth");
       })
       .catch((err) => {
-        console.log(err)
         toast.error(err);
       });
   };
@@ -48,6 +47,7 @@ const Register = () => {
 
   return (
     <Form
+      formType="register"
       title="Register"
       onChange={onChange}
       onSubmit={onSubmit}

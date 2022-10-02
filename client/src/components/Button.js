@@ -9,6 +9,7 @@ const BTN = styled.button.attrs((props) => ({
   color: ${(props) => props.theme.textColor};
   background-color: transparent;
   font-size: 1.5rem;
+  letter-spacing: 0.3rem;
   position: ${(props) => (props.icon ? "absolute" : "relative")};
   left: ${(props) => props.icon === "true" && "0"};
   top: ${(props) => props.icon === "true" && "0"};
@@ -20,7 +21,7 @@ const BTN = styled.button.attrs((props) => ({
   }
 `;
 
-const Button = ({ text, link, icon, type }) => {
+const Button = ({ text, link, icon, type, action }) => {
   const navigate = useNavigate();
   return (
     <BTN
